@@ -1,1 +1,1 @@
-# Yusuf Ozdemir's website
+# Yusuf Ozdemir
