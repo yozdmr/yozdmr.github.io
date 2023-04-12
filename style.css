@@ -1,0 +1,11 @@
+div.scroll-container {
+    overflow: auto;
+    white-space: nowrap;
+    display: flex;
+    align-items: flex-start;
+}
+
+.card {
+    display: inline-block !important;
+    white-space: normal;
+}
