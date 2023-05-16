@@ -14,17 +14,17 @@
         <div class="coloring"></div>
         <a id="name"></a>
         <div class="nav-right borderXwidth">
-            <a>ABOUT</a>
-            <a>SKILLS</a>
-            <a>PROJECTS</a>
-            <a>RESUME</a>
-            <a>CONTACT</a>
+            <a ref="#About" class="scrollLink">ABOUT</a>
+            <a ref="#Skills" class="scrollLink">SKILLS</a>
+            <a ref="#Projects" class="scrollLink">PROJECTS</a>
+            <a ref="#Resume" class="scrollLink">RESUME</a>
+            <a ref="#Contact" class="scrollLink">CONTACT</a>
         </div>
     </nav>
 
-    <main style="padding-bottom: 1000px;">
+    <main>
 
-        <h1>About</h1>
+        <h1 id="About">About</h1>
         <div class="ctg">
             <div class="ctg-inner md">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est repellendus eveniet iure rerum minima voluptate
@@ -36,7 +36,7 @@
             </div>
         </div>
         
-        <h1>Skills</h1>
+        <h1 id="Skills">Skills</h1>
         <div class="ctg">
             <div class="ctg-inner md">
                 <h2>Technical</h2>
@@ -61,18 +61,52 @@
             </div>
         </div>
 
-        <h1>Projects</h1>
-        <div class="ctg">
-            <div class="ctg-inner sm card">
+        <h1 id="Projects">Projects</h1>
+        <div class="ctg ctg-card-group">
+            <div class="ctg-inner card">
                 <h2>MiamiInsider</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque voluptates dolore asperiores magni cupiditate, ea
                     deleniti facilis quas assumenda quidem.</p>
                 <a href="#">View</a>
                 <a href="#">Github</a>
             </div>
+            <div class="ctg-inner card">
+                <h2>Zamazor</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque voluptates dolore asperiores magni cupiditate, ea
+                    deleniti facilis quas assumenda quidem.</p>
+                <a href="#">Github</a>
+            </div>
+            <div class="ctg-inner card">
+                <h2>Fatigue Modeling</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque voluptates dolore asperiores magni cupiditate, ea
+                    deleniti facilis quas assumenda quidem.</p>
+                <a href="#">Resource 1</a>
+                <a href="#">Resource 2</a>
+                <a href="#">Resource 3</a>
+            </div>
+        </div>
+
+        <div class="resume-ctg">
+            <h1 id="Resume">Resume</h1>
+            <div class="ctg">
+                <a class="btn btn-view" href="resume.pdf" target="_blank">View</a>
+            </div>
+        </div>
+
+        <h1>Contact</h1>
+        <div class="ctg">
+            <form action="mailto:yusuf.ozdemir.0713@gmail.com?subject=Contact regarding..." method="post" enctype="text/plain">
+                <input type="text" name="sub" placeholder="Subject"><input type="email" name="email" placeholder="Email"><br>
+                <textarea name="message" placeholder="Message"></textarea><br>
+                <input type="submit" value="Send">
+            </form>
+
         </div>
     </main>
     
+    <footer>
+        © Yusuf Ozdemir 2023, all rights reserved.
+    </footer>
 
     <script>
         // Navbar resizing
@@ -124,6 +158,23 @@
         });
         $('#nav').mouseleave(() => {
             $('.coloring').fadeOut();
+        });
+
+        // Scrolling to category
+        $(document).ready(function () {
+            $("a.scrollLink").click(function (event) {
+                event.preventDefault();
+
+                var scrollMod = 440;
+                if ($('#nav').hasClass("shrink")) {
+                    console.log(scrollMod);
+                    scrollMod = 150;
+                }
+                
+                $("html, body").animate({
+                    scrollTop: $($(this).attr("ref")).offset().top - scrollMod
+                }, 500);
+            });
         });
     </script>
 </body>
