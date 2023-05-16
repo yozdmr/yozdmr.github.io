@@ -60,6 +60,17 @@
                 </div>
             </div>
         </div>
+
+        <h1>Projects</h1>
+        <div class="ctg">
+            <div class="ctg-inner sm card">
+                <h2>MiamiInsider</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque voluptates dolore asperiores magni cupiditate, ea
+                    deleniti facilis quas assumenda quidem.</p>
+                <a href="#">View</a>
+                <a href="#">Github</a>
+            </div>
+        </div>
     </main>
     
 
@@ -70,14 +81,20 @@
         $(window).scroll(function () {
             var currentScrollTop = $(this).scrollTop();
 
+            // To guarantee header shrink if scrolled down page
+            if (currentScrollTop > 50) {
+                $("#nav").addClass("shrink");
+            }
+
             if (currentScrollTop > lastScrollTop) {
-                // scrolling down
+                // While scrolling down
                 if (currentScrollTop < 2) {
                     if (!$("#nav").hasClass("shrink"))
                         $("html, body").animate({ scrollTop: "+=50px" }, "slow");
                     $("#nav").addClass("shrink");
                 }
             } else {
+                // While scrolling up
                 if (currentScrollTop < 2) {
                     clearTimeout(timeout);
                     timeout = setTimeout(function () {
