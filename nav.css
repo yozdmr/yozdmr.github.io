@@ -1,0 +1,112 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+
+nav#nav {
+    font-family: Raleway;
+    margin: 0 auto;
+    padding: 10em 3em;
+    text-align: center;
+
+    background: #62db66;
+
+    position: sticky;
+    overflow: hidden;
+    top: 0;
+
+    transition: 0.4s;
+}
+
+#nav.shrink {
+    padding: 2em 0.5em;
+}
+
+#nav.shrink #name {
+    font-size: 1.5rem;
+}
+
+#nav #name {
+    font-size: 2.6rem;
+    font-weight: bold;
+    font-family:monospace;
+    transition: 0.4s;
+}
+
+#name:before {
+    content: "Hey, I'm ";
+    transition: opacity 0.5s ease-in-out;
+}
+#name:after { content: "Yusuf Ozdemir"; }
+#nav.shrink #name:before { 
+    opacity: 0;
+    content: ""; 
+}
+
+div.nav-right {
+    float: right;
+    margin-right: 40px;
+}
+
+#nav a {
+    float: left;
+    color: white;
+    text-decoration: none;
+    font: 1.5rem Raleway; /* make dynamic */
+    margin: 0px 10px;
+    padding: 10px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+
+.coloring {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(62, 226, 255);
+    box-shadow: 0 0 150px 120px rgb(62, 226, 255);
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 580px) {
+    #nav {
+        padding: 20px 10px !important;
+    }
+
+    #nav a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    #nav-right {
+        float: none;
+    }
+}
+
+div.borderXwidth a:before,
+div.borderXwidth a:after {
+    position: absolute;
+    opacity: 0;
+    width: 0%;
+    height: 2px;
+    content: '';
+    background: white;
+    transition: all 0.3s;
+}
+
+div.borderXwidth a:before {
+    left: 0px;
+    top: 0px;
+}
+
+div.borderXwidth a:after {
+    right: 0px;
+    bottom: 0px;
+}
+
+div.borderXwidth a:hover:before,
+div.borderXwidth a:hover:after {
+    opacity: 1;
+    width: 100%;
+}

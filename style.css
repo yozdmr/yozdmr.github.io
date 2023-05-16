@@ -1,11 +1,72 @@
-div.scroll-container {
-    overflow: auto;
-    white-space: nowrap;
-    display: flex;
-    align-items: flex-start;
+html,
+body {
+    margin: 0px;
+    background-color: rgb(0, 15, 15);
+    color: white;
+
+    font-family: monospace;
 }
 
-.card {
-    display: inline-block !important;
-    white-space: normal;
+p {
+    font-size: 16px;
+}
+
+img {
+    max-width: 100%;
+}
+
+div.ctg {
+    margin: 6rem;
+    display: flex;
+}
+
+div.ctg-inner {
+    margin: 0;
+    padding: 16px;
+}
+
+.lg { width: 66%; }
+
+.md { width: 49%; }
+
+.sm { width: 33%; }
+
+h1 {
+    padding-left: 6rem;
+    margin: 6rem 0 -6rem 0;
+    font-size: 1.8vw;
+}
+
+h1::after {
+    display: block;
+    width: 3.5vw;
+    height: 4px;
+    content: '';
+    background: rgb(130, 247, 255);
+}
+
+div.skill-ctg {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+}
+
+div.skill-item {
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 12px;
+}
+
+.skill-ctg.blue .skill-item {
+    background-color: #00dfdf;
+}
+
+.skill-ctg.green .skill-item {
+    background-color: #00df4a;
 }

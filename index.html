@@ -1,82 +1,113 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <title>Yusuf Ozdemir</title>
+</head>
+<body>
+    <nav id="nav">
+        <div class="coloring"></div>
+        <a id="name"></a>
+        <div class="nav-right borderXwidth">
+            <a>ABOUT</a>
+            <a>SKILLS</a>
+            <a>PROJECTS</a>
+            <a>RESUME</a>
+            <a>CONTACT</a>
+        </div>
+    </nav>
+
+    <main style="padding-bottom: 1000px;">
+
+        <h1>About</h1>
+        <div class="ctg">
+            <div class="ctg-inner md">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est repellendus eveniet iure rerum minima voluptate
+                    at minus
+                    quidem temporibus laboriosam omnis culpa rem porro incidunt possimus sunt, accusamus sed! Inventore.</p>
+            </div>
+            <div class="ctg-inner md">
+                <img src="images/undraw_profile.svg" alt="Profile">
+            </div>
+        </div>
         
-        <link rel="stylesheet" href="style.css">
-        
-        <!-- Bootstrap library -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <title>Yusuf Ozdemir</title>
-    </head>
-    <body>
-        <div class="container">
-            <ul class="nav nav-pills justify-content-center">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="research.html">Research</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="info.html">Information</a>
-                </li>
-            </ul>
-            <h3>About</h3>
-            <hr>
-            <div class="row">
-                <div class="col-md-3">
-                    <img src="photo_yozdemir.jpg" class="rounded img-fluid" alt="Yusuf Ozdemir">
-                </div>
-                <div class="col-md-7">
-                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
-                    eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-                    voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-                    voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
-                    sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima
-                    veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis
-                    autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem
-                    eum fugiat quo voluptas nulla pariatur?
-                </div>
-                <div class="col-md-2">
-                    <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-                        <button type="button" class="btn btn-primary active">Summary</button>
-                        <button type="button" class="btn btn-primary">Skills</button>
-                        <button type="button" class="btn btn-primary">Personal</button>
-                    </div>
+        <h1>Skills</h1>
+        <div class="ctg">
+            <div class="ctg-inner md">
+                <h2>Technical</h2>
+                <div class="skill-ctg blue">
+                    <div class="skill-item">HTML/CSS</div>
+                    <div class="skill-item">JavaScript</div>
+                    <div class="skill-item">Java</div>
+                    <div class="skill-item">Python</div>
+                    <div class="skill-item">MySQL</div>
+                    <div class="skill-item">PostgreSQL</div>
+                    <div class="skill-item">Web Development</div>
                 </div>
             </div>
-
-            <br>
-
-            <h3>Projects</h3>
-            <hr>
-            <div class="row">
-                <div class="scroll-container">
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">MiamiInsider</h5>
-                            <h6 class="card-subtitle mb-2 text-body-secondary">Web app</h6>
-                            <p class="card-text">A website to browse and review locations in Oxford, OH. Created using the Flask web
-                                framework.</p>
-                            <a href="https://github.com/kleinjb25/MiamiInsider" target="_blank" class="card-link">GitHub</a>
-                            <a href="#" target="_blank" class="card-link">Hosted</a>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">Zamazor</h5>
-                            <h6 class="card-subtitle mb-2 text-body-secondary">CGI web app</h6>
-                            <p class="card-text">A sample E-Commerce app. Created with C++ CGI scripts. Utilizes a mySQL database and
-                                HTML/CSS in the backend.</p>
-                            <a href="https://github.com/cse278abcd-assignments/zamazor-yozdmr" target="_blank" class="card-link">GitHub</a>
-                        </div>
-                    </div>
+            <div class="ctg-inner md">
+                <h2>Personal</h2>
+                <div class="skill-ctg green">
+                    <div class="skill-item">Quick thinker</div>
+                    <div class="skill-item">Team player</div>
+                    <div class="skill-item">Motivated</div>
+                    <div class="skill-item">Professional</div>
                 </div>
             </div>
         </div>
-    </body>
+    </main>
+    
+
+    <script>
+        // Navbar resizing
+        var lastScrollTop = 0;
+        var timeout;
+        $(window).scroll(function () {
+            var currentScrollTop = $(this).scrollTop();
+
+            if (currentScrollTop > lastScrollTop) {
+                // scrolling down
+                if (currentScrollTop < 2) {
+                    if (!$("#nav").hasClass("shrink"))
+                        $("html, body").animate({ scrollTop: "+=50px" }, "slow");
+                    $("#nav").addClass("shrink");
+                }
+            } else {
+                if (currentScrollTop < 2) {
+                    clearTimeout(timeout);
+                    timeout = setTimeout(function () {
+                        if ($(this).scrollTop() === 0) {
+                            $("#nav").removeClass("shrink");
+                        }
+                    }, 250);
+                }
+            }
+            lastScrollTop = currentScrollTop;
+        });
+
+
+        // Navbar hover effect
+        $('#nav').mousemove(function (e) {
+            var offs = $(this).offset(),
+                p = { x: offs.left, y: offs.top },
+                mPos = { x: e.pageX, y: e.pageY },
+                x = mPos.x - p.x - 20,
+                y = mPos.y - p.y - 20;
+
+            $('.coloring', this).css({ left: x, top: y, backgroundPosition: -x + 'px ' + -y + 'px' });
+
+        });
+        $('#nav').mouseenter(() => {
+            $('.coloring').fadeIn(200);
+        });
+        $('#nav').mouseleave(() => {
+            $('.coloring').fadeOut();
+        });
+    </script>
+</body>
 </html>
