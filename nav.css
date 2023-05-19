@@ -1,4 +1,5 @@
 @import 'https://fonts.googleapis.com/css?family=Raleway';
+@import 'style.css';
 
 nav#nav {
     font-family: Raleway;
@@ -6,7 +7,7 @@ nav#nav {
     padding: 10em 3em;
     text-align: center;
 
-    background: #62db66;
+    background-image: linear-gradient(to right, var(--primary-color), var(--tetriary-color)); ;
 
     position: sticky;
     overflow: hidden;
@@ -40,6 +41,14 @@ nav#nav {
     content: ""; 
 }
 
+#nav img {
+    border-radius: 50%;
+    width: 200px;
+    background-image: url('path/to/image.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
 div.nav-right {
     float: right;
     margin-right: 40px;
@@ -59,12 +68,13 @@ div.nav-right {
 
 .coloring {
     position: absolute;
+    display: none;
     top: 0;
     left: 0;
     width: 40px;
     height: 40px;
-    background-color: rgb(62, 226, 255);
-    box-shadow: 0 0 150px 120px rgb(62, 226, 255);
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 150px 140px rgba(255, 255, 255, 0.5);
     border-radius: 50%;
 }
 
