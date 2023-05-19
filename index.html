@@ -35,6 +35,10 @@
                 <img src="images/undraw_profile.svg" alt="Profile">
             </div>
         </div>
+
+        <a class="top">
+            ↑
+        </a>
         
         <h1 id="Skills">Skills</h1>
         <div class="ctg">
@@ -147,6 +151,17 @@
                 }
             }
             lastScrollTop = currentScrollTop;
+        });
+
+        // Top button
+        $('.top').click(function (e) {
+            var originalColor = $('.top').css("background-color");
+            $('.top').css("background-color", "#003cff");
+            setTimeout(function () {
+                $('.top').css("background-color", originalColor);
+            }, 750);
+
+            $('html, body').animate({ scrollTop: 0 }, 'slow');
         });
 
 

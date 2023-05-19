@@ -78,6 +78,30 @@ div.nav-right {
     border-radius: 50%;
 }
 
+a.top {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+
+    margin: 30px;
+    padding: 12px 20px;
+
+    font-size: 26px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition-duration: 250ms;
+}
+
+.top:hover {
+    background-color: #5afc90;
+}
+
+
 @media screen and (max-width: 580px) {
     #nav {
         padding: 20px 10px !important;
