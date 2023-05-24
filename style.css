@@ -14,11 +14,11 @@ body {
     background-color: var(--background-color);
     color: white;
 
-    font-family: monospace;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 p {
-    font-size: 16px;
+    font-size: 18px;
 }
 
 img {
@@ -192,6 +192,20 @@ input {
 
     padding: 12px 20px;
     border-radius: 6px;
+}
+
+input[type=submit] {
+    color: white;
+    font-weight: bold;
+    background-color: #00aeff;
+    border: none;
+
+    transition-duration: 250ms;
+}
+
+input[type=submit]:hover {
+    background-color: #23b9ff;
+    cursor: pointer;
 }
 
 textarea {
